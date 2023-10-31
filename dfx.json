@@ -1,21 +1,11 @@
 {
   "canisters": {
-    "foo_backend": {
-      "main": "src/foo_backend/main.mo",
-      "type": "motoko"
-    },
-    "foo_frontend": {
-      "dependencies": [
-        "foo_backend"
-      ],
-      "frontend": {
-        "entrypoint": "src/foo_frontend/src/index.html"
-      },
-      "source": [
-        "src/foo_frontend/assets",
-        "dist/foo_frontend/"
-      ],
-      "type": "assets"
+    "counter": {
+      "main": "src/counter/main.mo",
+      "type": "motoko",
+      "declarations": {
+        "node_compatibility": true
+      }
     }
   },
   "defaults": {
@@ -24,6 +14,6 @@
       "packtool": ""
     }
   },
-  "output_env_file": ".env",
+  "output_env_file": "src/counter_client/.env",
   "version": 1
 }
